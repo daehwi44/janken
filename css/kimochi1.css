@@ -1,0 +1,141 @@
+body {
+  font-size: 32px;
+  /*要素を中央寄せ*/
+  text-align: center;
+}
+
+/*吹き出し
+------------*/
+.fukidasi {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100Px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  background: #FFF;
+  /*外側を丸める*/
+  border-radius: 50px;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  /*行間を設定*/
+  line-height: 50px;
+}
+
+/*beforeとafterで吹き出しの出だしの部分表現してるっぽいけどよくわかんない*/
+.fukidasi:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+
+.fukidasi:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-top: 14px solid #555;
+  z-index: 1;
+}
+
+
+/*選択肢
+---------*/
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.answer {
+  text-align: center;
+  font-family: 'Mochiy Pop One',
+    sans-serif;
+  width: 300px;
+  height: 100px;
+  /*行間を設定*/
+  line-height: 100px;
+  padding: 0;
+  background: #cff;
+  /*外側を丸める*/
+  border-radius: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  /*リンクの下線を消す*/
+  text-decoration: none;
+  /*文字と文字の間をあける*/
+  letter-spacing: 8px;
+  margin: 40px auto;
+  /*選択肢上に乗ると手に変わる*/
+  cursor: pointer;
+}
+
+
+/*非表示部分*/
+
+#maru {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 300px;
+  margin-right: 200px;
+}
+
+#keizoku p {
+  margin-top: 0px;
+  margin-left: 400px;
+  font-size: 100px;
+  width: 800px;
+  text-align: center;
+
+}
+
+#next a {
+
+  display: inline-block;
+  background-color: #009900;
+  margin-top: 30px;
+  margin-right: 600px;
+  padding: 20px;
+  color: #fff;
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+#batu {
+  display: flex;
+  justify-content: space-around;
+}
+
+#game_over p {
+  margin-top: 0px;
+  margin-left: 400px;
+  font-size: 100px;
+  width: 800px;
+  text-align: center;
+}
+
+#hajime a {
+  display: inline-block;
+  background-color: #3366FF;
+  margin-top: 30px;
+  margin-right: 500px;
+  padding: 20px;
+  color: #fff;
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+}

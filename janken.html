@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <p id="aite">???</p>
+    <div id="result">結果は？</div>
+    <p id="kekka">???</p>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+
+    //グー
+    $("#gu_btn").on("click", function () {
+
+
+      const min = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      if (randomNumber === 0) {
+
+        $("#aite").text("グー");
+        $("#kekka").text("あいこ");
+
+      } else if (randomNumber === 1) {
+
+        $("#aite").text("チョキ");
+        $("#kekka").text("かち");
+
+      } else if (randomNumber === 2) {
+
+        $("#aite").text("パー");
+        $("#kekka").text("まけ");
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+
+    //チョキ
+    $("#cho_btn").on("click", function () {
+
+
+      const min = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      if (randomNumber === 0) {
+
+        $("#aite").text("グー");
+        $("#kekka").text("まけ");
+
+      } else if (randomNumber === 1) {
+
+        $("#aite").text("チョキ");
+        $("#kekka").text("あいこ");
+
+      } else if (randomNumber === 2) {
+
+        $("#aite").text("パー");
+        $("#kekka").text("かち");
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+
+
+    //パー
+    $("#par_btn").on("click", function () {
+
+
+      const min = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      if (randomNumber === 0) {
+
+        $("#aite").text("グー");
+        $("#kekka").text("かち");
+
+      } else if (randomNumber === 1) {
+
+        $("#aite").text("チョキ");
+        $("#kekka").text("まけ");
+
+      } else if (randomNumber === 2) {
+
+        $("#aite").text("パー");
+        $("#kekka").text("あいこ");
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

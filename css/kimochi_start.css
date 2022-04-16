@@ -1,0 +1,35 @@
+body {
+  font-size: 32px;
+  /*要素を中央寄せ*/
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+div {
+  margin-top: 30px;
+}
+
+.btn_start {
+  text-align: center;
+  font-family: 'Mochiy Pop One', sans-serif;
+  width: 800px;
+  height: 100px;
+  /*行間を設定*/
+  line-height: 100px;
+  color: #fff;
+  display: inline-block;
+  padding: 0;
+  background: #dd4455;
+  /*外側を丸める*/
+  border-radius: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  /*リンクの下線を消す*/
+  text-decoration: none;
+  /*文字と文字の間をあける*/
+  letter-spacing: 8px;
+  margin: 40px auto;
+}

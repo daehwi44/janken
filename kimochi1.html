@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" href="css/kimochi1.css">
+  <title>社長のきもち</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div>
+    <div class="fukidasi">
+      <p id="serif1">今日は何を食べに行こうか??</p>
+      <p id="serif2">楽しみだな</p>
+    </div>
+  </div>
+
+  <img src="img/syacho.png" alt="syacho">
+
+  <ul>
+    <li id="a1" class="answer">かつ丼</li>
+    <li id="a2" class="answer">カレー</li>
+    <li id="a3" class="answer">ラーメン</li>
+    <li id="a4" class="answer">パピコ</li>
+  </ul>
+
+
+  <!------------
+    非表示部分
+  -------------->
+
+  <!--吹き出しの変更-->
+  <div style="display: none;" id="henkou_serifu1">
+    <p>今日の私の気分は
+      <span id="kimochi">???</span>なんだ
+    </p>
+  </div>
+
+  <div style="display: none;" id="henkou_serifu2">
+    <p id="kekka">???</p>
+  </div>
+
+  <!--結果表示-->
+
+  <div style="display: none;" id="maru">
+    <div id="keizoku">
+      <p>課長に昇進！</p>
+    </div>
+
+    <div id="next">
+      <a href="kimochi2.html">次へ</a>
+    </div>
+  </div>
+
+  <div style="display: none;" id="batu">
+    <div id="game_over">
+      <p>GAME OVER</p>
+    </div>
+
+    <div id="hajime">
+      <a href="kimochi_start.html">はじめから</a>
+    </div>
+  </div>
+
+
+  <!------------
+    非表示ここまで
+  --------------->
+
+</body>
+
+<!--ここからJS記述-->
+<script>
+  //----------------------------
+  //1つ目の回答を押した場合
+  //----------------------------
+
+  $(function () {
+    //ボタンの色を変える
+    $("#a1").on("click", function () {
+      $("#a1").css("background-color", "#fbb");
+      $("#a2,#a3,#a4").css("background-color", "#aaa");
+
+      //確率計算
+      const min = 0;
+      const max = 3;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+
+      //------------
+      //結果表示
+      //------------
+      if (randomNumber === 0) {
+        $("#kimochi").text("かつ丼");
+        $("#kekka").text("さすが♡");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#maru").fadeIn("slow");//正解の場合の結果表示
+
+      } else if (randomNumber === 1) {
+        $("#kimochi").text("カレー");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 2) {
+        $("#kimochi").text("ラーメン");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 3) {
+        $("#kimochi").text("パピコ");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else {
+        $("h1").text("エラー");
+      }
+    });
+  });
+
+
+  //----------------------------
+  //2つ目の回答を押した場合
+  //----------------------------
+  $(function () {
+    //ボタンの色を変える
+    $("#a2").on("click", function () {
+      $("#a2").css("background-color", "#fbb");
+      $("#a1,#a3,#a4").css("background-color", "#aaa");
+
+      //確率計算
+      const min = 0;
+      const max = 3;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      //------------
+      //結果表示
+      //------------
+      if (randomNumber === 0) {
+        $("#kimochi").text("かつ丼");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 1) {
+        $("#kimochi").text("カレー");
+        $("#kekka").text("さすが♡");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#maru").fadeIn("slow");//正解の場合の結果表示
+
+      } else if (randomNumber === 2) {
+        $("#kimochi").text("ラーメン");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 3) {
+        $("#kimochi").text("パピコ");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+  });
+
+  //----------------------------
+  //3つ目の回答を押した場合
+  //----------------------------
+  $(function () {
+    //ボタンの色を変える
+    $("#a3").on("click", function () {
+      $("#a3").css("background-color", "#fbb");
+      $("#a1,#a2,#a4").css("background-color", "#aaa");
+
+      //確率計算
+      const min = 0;
+      const max = 3;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      //------------
+      //結果表示
+      //------------
+      if (randomNumber === 0) {
+        $("#kimochi").text("かつ丼");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 1) {
+        $("#kimochi").text("カレー");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 2) {
+        $("#kimochi").text("ラーメン");
+        $("#kekka").text("さすが♡");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#maru").fadeIn("slow");//正解の場合の結果表示
+
+      } else if (randomNumber === 3) {
+        $("#kimochi").text("パピコ");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+  });
+
+
+
+  //----------------------------
+  //4つ目の回答を押した場合
+  //----------------------------
+  $(function () {
+    //ボタンの色を変える
+    $("#a4").on("click", function () {
+      $("#a4").css("background-color", "#fbb");
+      $("#a1,#a2,#a3").css("background-color", "#aaa");
+
+      //確率計算
+      const min = 0;
+      const max = 3;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomNumber);
+
+      //------------
+      //結果表示
+      //------------
+      if (randomNumber === 0) {
+        $("#kimochi").text("かつ丼");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 1) {
+        $("#kimochi").text("カレー");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 2) {
+        $("#kimochi").text("ラーメン");
+        $("#kekka").text("明日から来なくていいよ");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#batu").fadeIn("slow");//不正解の場合の結果表示
+
+      } else if (randomNumber === 3) {
+        $("#kimochi").text("パピコ");
+        $("#kekka").text("さすが♡");
+        //社長の返答セリフを取得
+        const srf1 = $("#henkou_serifu1").text();
+        const srf2 = $("#henkou_serifu2").text();
+        $("#serif1").text(srf1);
+        $("#serif2").text(srf2);
+        $("#maru").fadeIn("slow");//正解の場合の結果表示
+
+      } else {
+        $("#aite").text("エラー");
+      }
+    });
+  });
+
+
+</script>
+
+</html>
