@@ -2,12 +2,15 @@ body {
   font-size: 32px;
   /*要素を中央寄せ*/
   text-align: center;
+  position: relative;
 }
 
 /*吹き出し
 ------------*/
 .fukidasi {
   position: relative;
+  /*width指定で吹き出しの横幅固定*/
+  width: 1000px;
   display: inline-block;
   margin-top: 50px;
   margin-bottom: 30px;
@@ -80,6 +83,12 @@ ul {
   margin: 40px auto;
   /*選択肢上に乗ると手に変わる*/
   cursor: pointer;
+
+}
+
+.answer:hover {
+  /*カーソルを合わせると色が変わる*/
+  background-color: #59b1eb;
 }
 
 
