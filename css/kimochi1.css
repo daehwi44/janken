@@ -2,7 +2,6 @@ body {
   font-size: 32px;
   /*要素を中央寄せ*/
   text-align: center;
-  position: relative;
 }
 
 /*吹き出し
@@ -96,26 +95,15 @@ ul {
 
 #maru {
   display: flex;
-  justify-content: space-around;
-  margin-left: 300px;
-  margin-right: 200px;
-}
-
-#keizoku p {
-  margin-top: 0px;
-  margin-left: 400px;
-  font-size: 100px;
-  width: 800px;
-  text-align: center;
+  justify-content: center;
 
 }
+
 
 #next a {
-
   display: inline-block;
   background-color: #009900;
-  margin-top: 30px;
-  margin-right: 600px;
+  margin-top: 10px;
   padding: 20px;
   color: #fff;
   width: 500px;
@@ -126,22 +114,14 @@ ul {
 
 #batu {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-#game_over p {
-  margin-top: 0px;
-  margin-left: 400px;
-  font-size: 100px;
-  width: 800px;
-  text-align: center;
-}
 
 #hajime a {
   display: inline-block;
   background-color: #3366FF;
-  margin-top: 30px;
-  margin-right: 500px;
+  margin-top: 10px;
   padding: 20px;
   color: #fff;
   width: 500px;

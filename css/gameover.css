@@ -1,0 +1,39 @@
+body {
+    display: none;
+    font-size: 32px;
+    /*要素を中央寄せ*/
+    text-align: center;
+    background-color: blue;
+}
+
+.main_txt {
+    margin-top: 200px;
+    font-size: 5em;
+}
+
+.btn_next {
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    width: 500px;
+    height: 100px;
+    /*行間を設定*/
+    line-height: 100px;
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+    background: #dd4455;
+    /*外側を丸める*/
+    border-radius: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    /*リンクの下線を消す*/
+    text-decoration: none;
+    /*文字と文字の間をあける*/
+    letter-spacing: 8px;
+    margin: 100px auto;
+}
+
+.btn_next:hover {
+    /*カーソルを合わせると色が変わる*/
+    background-color: #FFCCFF;
+}

@@ -33,3 +33,8 @@ div {
   letter-spacing: 8px;
   margin: 40px auto;
 }
+
+.btn_start:hover {
+  /*カーソルを合わせると色が変わる*/
+  background-color: #FFCCFF;
+}

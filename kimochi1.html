@@ -47,23 +47,18 @@
 
   <!--結果表示-->
 
-  <div style="display: none;" id="maru">
-    <div id="keizoku">
-      <p>課長に昇進！</p>
-    </div>
 
+  <div style="display: none;" id="maru">
     <div id="next">
-      <a href="kimochi2.html">次へ</a>
+      <a href="kacho.html">次へ</a>
     </div>
   </div>
 
+
   <div style="display: none;" id="batu">
-    <div id="game_over">
-      <p>GAME OVER</p>
-    </div>
 
     <div id="hajime">
-      <a href="kimochi_start.html">はじめから</a>
+      <a href="gameover.html">はじめから</a>
     </div>
   </div>
 
@@ -105,6 +100,9 @@
         $("#serif1").text(srf1);
         $("#serif2").text(srf2);
         $("#maru").fadeIn("slow");//正解の場合の結果表示
+
+        //指定したhtmlへ飛ぶJS
+        //無効 document.location.href = "kacho.html";
 
       } else if (randomNumber === 1) {
         $("#kimochi").text("カレー");
